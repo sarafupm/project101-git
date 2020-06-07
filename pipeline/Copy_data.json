@@ -63,7 +63,7 @@
 				"type": "Validation",
 				"dependsOn": [
 					{
-						"activity": "Wait1",
+						"activity": "Wait 10 second",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -80,28 +80,12 @@
 				}
 			},
 			{
-				"name": "Wait1",
+				"name": "Wait 10 second",
 				"type": "Wait",
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"waitTimeInSeconds": 1
-				}
-			},
-			{
-				"name": "Wait2",
-				"type": "Wait",
-				"dependsOn": [
-					{
-						"activity": "Copy data from input to output",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"waitTimeInSeconds": 1
+					"waitTimeInSeconds": 10
 				}
 			}
 		],
